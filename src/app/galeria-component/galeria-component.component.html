@@ -1,0 +1,15 @@
+<h3>{{titulo}}</h3>
+<!-- <div *ngIf="!fotos.length">
+    Nenhuma imagem
+</div>  -->
+<div *ngIf="fotos.length">
+    <img [src]="fotos[fotoAtual]" />
+</div>
+
+{{fotoAtual + 1 }} de {{fotos.length}}
+<button [disabled]="fotoAtual === 0" (click)="firstOne() ">&lt; &lt; </button>
+<button [disabled]="fotoAtual === 0"  (click)="previous()"> &lt;</button>
+<button [disabled]="fotoAtual === fotos.length-1" (click)="next()"> &gt; </button>
+<button [disabled]="fotoAtual === fotos.length-1" (click)="lastOne()"> &gt; &gt;</button>
+
+
